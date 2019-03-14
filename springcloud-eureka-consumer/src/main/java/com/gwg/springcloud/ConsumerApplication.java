@@ -16,7 +16,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 //服务注册与发现，即Eureka客户端服务提供方用于服务注册，Eureka客户端服务访问方用于服务发现
 @EnableEurekaClient
 //开启Feign客户端,声明式调用服务使用
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.gwg.springcloud.remote")//basePackages指定扫描目录
 public class ConsumerApplication {
 
     public static void main(String[] args) {
