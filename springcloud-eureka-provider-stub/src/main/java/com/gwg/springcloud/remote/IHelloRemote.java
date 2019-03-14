@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(name="service-provider")
+//声明式服务
+@FeignClient(name="service-provider") //调用那个服务的名称
 public interface IHelloRemote {
 
     @RequestMapping(value = "/user/{name}/{age}", method = RequestMethod.GET)

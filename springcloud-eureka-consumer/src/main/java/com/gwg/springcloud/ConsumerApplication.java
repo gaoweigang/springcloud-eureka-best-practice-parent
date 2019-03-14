@@ -13,8 +13,10 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  * @EnableFeignClients注解
  */
 @SpringBootApplication
+//服务注册与发现，即Eureka客户端服务提供方用于服务注册，Eureka客户端服务访问方用于服务发现
 @EnableEurekaClient
-@EnableFeignClients //开启Feign功能,因为该应该需要访问eureka客户端提供的服务
+//开启Feign客户端,声明式调用服务使用
+@EnableFeignClients
 public class ConsumerApplication {
 
     public static void main(String[] args) {
